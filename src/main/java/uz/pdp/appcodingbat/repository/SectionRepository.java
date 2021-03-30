@@ -1,0 +1,13 @@
+package uz.pdp.appcodingbat.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import uz.pdp.appcodingbat.entity.Course;
+import uz.pdp.appcodingbat.entity.Section;
+
+
+@Repository
+public interface SectionRepository extends JpaRepository<Section, Integer> {
+
+    boolean existsByName(String name);
+}
